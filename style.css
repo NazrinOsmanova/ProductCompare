@@ -13,7 +13,7 @@ body {
 }
 
 .left {
-    width: 45%;
+    width: 55%;
 }
 
 table {
@@ -82,7 +82,7 @@ main {
 }
 
 .right {
-    width: 45%;
+    width: 40%;
     background-color: #fff;
     padding: 30px;
     border-radius: 12px;

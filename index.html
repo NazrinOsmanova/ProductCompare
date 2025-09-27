@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     <header>
         <h1>Price Compare</h1>
     </header>
@@ -24,71 +22,19 @@
                         <th>Product Name</th>
                         <th>Brand</th>
                         <th>Size</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
+                        <th>Price</th>
+                        <th>Unit Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="products">
                     <tr>
-                        <td>Data 1A</td>
-                        <td>Data 1B</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>
-                            <a href="#edit" title="Edit">✏️</a>
-                            &nbsp;
-                            <a href="#delete" title="Delete" onclick="return confirm('Silinsin?')">🗑️</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data 1A</td>
-                        <td>Data 1B</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>
-                            <a href="#edit" title="Edit">✏️</a>
-                            &nbsp;
-                            <a href="#delete" title="Delete" onclick="return confirm('Silinsin?')">🗑️</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data 1A</td>
-                        <td>Data 1B</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>
-                            <a href="#edit" title="Edit">✏️</a>
-                            &nbsp;
-                            <a href="#delete" title="Delete" onclick="return confirm('Silinsin?')">🗑️</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data 1A</td>
-                        <td>Data 1B</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>
-                            <a href="#edit" title="Edit">✏️</a>
-                            &nbsp;
-                            <a href="#delete" title="Delete" onclick="return confirm('Silinsin?')">🗑️</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data 1A</td>
-                        <td>Data 1B</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
-                        <td>Data 1C</td>
+                        <td>Bravo</td>
+                        <td>Flour</td>
+                        <td>Bismak</td>
+                        <td><span>2.5</span>kq</td>
+                        <td><span>1.2</span>AZN</td>
+                        <td><span>0.48</span>AZN</td>
                         <td>
                             <a href="#edit" title="Edit">✏️</a>
                             &nbsp;
@@ -98,21 +44,6 @@
                 </tbody>
             </table>
         </div>
-        <!-- <div class="right">
-            <button>+ Add Item</button>
-            <div>
-                <label for="">Store name</label>
-                <input type="text" placeholder="example, a+">
-                <label for="">Product Name</label>
-                <input type="text" placeholder="example, sugar">
-                <label for="">Brand Name</label>
-                <input type="text" placeholder="example, Roshen">
-                <label for="">Size</label>
-                <input type="text" placeholder="example, 5">
-                <label for="">Price</label>
-                <input type="text" placeholder="example, 5$">
-            </div>
-        </div> -->
         <div class="right">
             <button class="add-button">+ Add Item</button>
 
@@ -137,16 +68,18 @@
                     <input type="text" id="size" placeholder="example, 5">
                 </div>
 
+                <!-- <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" id="quantity" placeholder="example, 7">
+                </div> -->
+
                 <div class="form-group">
                     <label for="price">Price</label>
                     <input type="text" id="price" placeholder="example, 5$">
                 </div>
             </form>
         </div>
-
-
     </main>
-
 
     <script src="script.js"></script>
 </body>
