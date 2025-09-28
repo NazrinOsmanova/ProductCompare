@@ -1,3 +1,6 @@
 1. eyni məhsul əlavə ediləndə iki dəfə alert çıxır!
 2. edit
-3. delete
+3. delete +
+4. responsivlik
+5. məhsullar qiymətə görə sıralanmalıdır
+6. formdakı inputlardan biri fərqli olanda data əlavə edilə bilməlidir

@@ -23,6 +23,7 @@ table {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 thead {
@@ -79,6 +80,7 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .right {
@@ -91,20 +93,21 @@ main {
     margin: auto;
 }
 
-.add-button {
+button {
     display: inline-block;
     background-color: #28a745;
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
     margin-bottom: 20px;
     transition: background-color 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.add-button:hover {
+button:hover {
     background-color: #218838;
 }
 
@@ -138,24 +141,6 @@ input:focus {
     outline: none;
 }
 
-#clear {
-    display: inline-block;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-#clear:hover {
-    background-color: #218838;
-}
-
 @media (max-width: 1050px) {
     main {
         flex-direction: column;
@@ -168,5 +153,23 @@ input:focus {
 
     #clear {
         float: right;
+    }
+}
+
+@media (max-width: 650px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+
+    }
+
+    #clear {
+        float: none;
+        width: 100%;
+    }
+
+    .left {
+        margin-bottom: 35px;
     }
 }

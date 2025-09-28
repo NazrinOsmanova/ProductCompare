@@ -7,7 +7,7 @@ const brandName = document.querySelector("#brand-name").value.trim();
 const size = Number(document.querySelector("#size").value);
 const price = Number(document.querySelector("#price").value);
 
-dataArray.forEach(item => {
+dataArray.forEach((item, index) => {
     let row = document.createElement("tr");
     row.innerHTML = `
         <td>${item.storeName}</td>
@@ -19,7 +19,7 @@ dataArray.forEach(item => {
         <td>
             <a href="#edit" title="Edit">✏️</a>
             &nbsp;
-            <a href="#delete" title="Delete" onclick="return confirm('Silinsin?')">🗑️</a>
+            <a href="#delete" title="Delete" onclick="deleteRow(event, this, ${index})">🗑️</a>
         </td>
     `;
     tableBody.appendChild(row);
@@ -27,7 +27,7 @@ dataArray.forEach(item => {
 
 function renderTable() {
     tableBody.innerHTML = "";
-    dataArray.forEach(item => {
+    dataArray.forEach((item, index) => {
         let row = document.createElement("tr");
         row.innerHTML = `
             <td>${item.storeName}</td>
@@ -39,7 +39,7 @@ function renderTable() {
             <td>
                 <a href="#edit" title="Edit">✏️</a>
                 &nbsp;
-                <a href="#delete" title="Delete" onclick="return confirm('Silinsin?')">🗑️</a>
+                <a href="#delete" title="Delete" onclick="deleteRow(event, this, ${index})">🗑️</a>
             </td>
         `;
         tableBody.appendChild(row);
@@ -101,3 +101,19 @@ document.querySelector("#clear").addEventListener("click", function () {
     localStorage.removeItem("myTableData");
     dataArray = [];
 })
+
+
+
+function deleteRow(event, deleteLink, index) {
+    event.preventDefault();
+
+    const confirmDelete = confirm('Silinsin?');
+    if (confirmDelete) {
+        const row = deleteLink.closest('tr');
+        row.remove();
+
+        dataArray.splice(index, 1);
+
+        localStorage.setItem('myTableData', JSON.stringify(dataArray));
+    }
+}
